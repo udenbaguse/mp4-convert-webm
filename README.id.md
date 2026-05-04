@@ -89,8 +89,7 @@ ffmpeg -version
 
 Download file RAW:
 
-https://github.com/richardpl/arnndn-models/raw/master/cb.rnnn
-
+https://github.com/richardpl/arnndn-models/blob/master/cb.rnnn
 
 Simpan sebagai:
 ```
