@@ -116,7 +116,7 @@ ffmpeg -hwaccel [Hardware-Accelerated-Processing] -i input.mp4 -af "arnndn=m=cb.
 
 ---
 
-## 🖥️ Berdasarkan OS
+## 🖥️ Berdasarkan OS (contoh Jumlah Logical = 8)
 
 ### 🪟 Windows
 ```bash
