@@ -111,7 +111,7 @@ project-folder/
 ## ⚙️ Cara Penggunaan
 🧩 Template
 ```bash
-ffmpeg -hwaccel [HWACCEL] -i input.mp4 -af "arnndn=m=cb.rnnn" -c:v libvpx-vp9 -crf 30 -b:v 0 -threads [THREADS] -c:a libopus output.webm
+ffmpeg -hwaccel [Hardware-Accelerated-Processing] -i input.mp4 -af "arnndn=m=cb.rnnn" -c:v libvpx-vp9 -crf 30 -b:v 0 -threads [JUMLAH_LOGICAL] -c:a libopus output.webm
 ```
 
 ---
