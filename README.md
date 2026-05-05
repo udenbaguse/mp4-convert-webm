@@ -117,8 +117,8 @@ ffmpeg -hwaccel [Hardware-Accelerated-Processing] -i input.mp4 -af "arnndn=m=cb.
 
 ---
 
-## 🖥️ By OS
-example Logical Count = 8
+## 🖥️ By OS (example Logical Count = 8)
+
 ### 🪟 Windows
 ```bash
 ffmpeg -hwaccel d3d11va -i input.mp4 -af "arnndn=m=cb.rnnn" -c:v libvpx-vp9 -crf 30 -b:v 0 -threads 8 -c:a libopus output.webm
