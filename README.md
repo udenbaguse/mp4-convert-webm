@@ -110,56 +110,30 @@ project-folder/
 ---
 
 ## ⚙️ How to Use
-Command template:
+🧩 Command Template
 ```bash
-ffmpeg [Hardware Accelerated Processing] -i input.mp4 -af "arnndn=m=cb.rnnn" -c:v libvpx-vp9 -crf 30 -b:v 0 -threads [LOGICAL_COUNT] -c:a libopus output.webm
-```
----
-
-### 1. Intel CPU (i3/i5/i7/i9)
-
-#### Intel Core i3 (2 Core, 4 Logical)
-```bash
-ffmpeg -hwaccel qsv -i input.mp4 -af "arnndn=m=cb.rnnn" -c:v libvpx-vp9 -crf 30 -b:v 0 -threads 4 -c:a libopus output.webm
-```
-
-#### Intel Core i5/i7 (4 Core, 8 Logical)
-```bash
-ffmpeg -hwaccel qsv -i input.mp4 -af "arnndn=m=cb.rnnn" -c:v libvpx-vp9 -crf 30 -b:v 0 -threads 8 -c:a libopus output.webm
-```
-
-#### Intel Core i9 (6 Core, 12 Logical)
-```bash
-ffmpeg -hwaccel qsv -i input.mp4 -af "arnndn=m=cb.rnnn" -c:v libvpx-vp9 -crf 30 -b:v 0 -threads 12 -c:a libopus output.webm
+ffmpeg -hwaccel [HWACCEL] -i input.mp4 -af "arnndn=m=cb.rnnn" -c:v libvpx-vp9 -crf 30 -b:v 0 -threads [THREADS] -c:a libopus output.webm
 ```
 
 ---
 
-### 2. AMD CPU (Ryzen) + GPU (VAAPI)
+## 🖥️ By OS
 
-#### Ryzen 3 (2 Core, 4 Logical)
+### 🪟 Windows
 ```bash
-ffmpeg -hwaccel vaapi -vaapi_device /dev/dri/renderD128 -i input.mp4 -af "arnndn=m=cb.rnnn" -c:v libvpx-vp9 -crf 30 -b:v 0 -threads 4 -c:a libopus output.webm
+ffmpeg -hwaccel d3d11va -i input.mp4 -af "arnndn=m=cb.rnnn" -c:v libvpx-vp9 -crf 30 -b:v 0 -threads 8 -c:a libopus output.webm
 ```
 
-#### Ryzen 5/7 (4 Core, 8 Logical)
+### 🐧 Linux
 ```bash
 ffmpeg -hwaccel vaapi -vaapi_device /dev/dri/renderD128 -i input.mp4 -af "arnndn=m=cb.rnnn" -c:v libvpx-vp9 -crf 30 -b:v 0 -threads 8 -c:a libopus output.webm
 ```
 
-#### Ryzen 9 (8 Core, 16 Logical)
+### 🍎 macOS
 ```bash
-ffmpeg -hwaccel vaapi -vaapi_device /dev/dri/renderD128 -i input.mp4 -af "arnndn=m=cb.rnnn" -c:v libvpx-vp9 -crf 30 -b:v 0 -threads 16 -c:a libopus output.webm
+ffmpeg -hwaccel videotoolbox -i input.mp4 -af "arnndn=m=cb.rnnn" -c:v libvpx-vp9 -crf 30 -b:v 0 -threads 8 -c:a libopus output.webm
 ```
 
----
-
-### 3. NVIDIA GPU (All CPUs)
-```bash
-ffmpeg -hwaccel cuda -i input.mp4 -af "arnndn=m=cb.rnnn" -c:v libvpx-vp9 -crf 30 -b:v 0 -threads 8 -c:a libopus output.webm
-```
-
----
 
 ## 💡 Important Notes
 
